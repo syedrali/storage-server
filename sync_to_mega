@@ -1,4 +1,4 @@
 #!/bin/bash
-echo "Syncing to MEGA"
+echo "Syncing to MEGA.."
 
-nohup rclone sync /home/storage/cloud-storage mega:"Cloud Storage" &> /dev/null &
+/usr/bin/screen -dmS sync_to_mega /usr/bin/rclone sync ~/cloud-storage mega:"Cloud Storage"
