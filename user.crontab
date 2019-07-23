@@ -1,2 +1,2 @@
-# Backup Cloud Storage locally weekly at midnight on Sunday
+# Backup Cloud Storage weekly at midnight on Sunday
 0 0 * * 0 ~/scripts/backup_cloud-storage
