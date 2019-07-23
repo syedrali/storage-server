@@ -1,0 +1,2 @@
+# Backup Cloud Storage daily at midnight
+0 0 * * * ~/scripts/backup_cloud-storage
