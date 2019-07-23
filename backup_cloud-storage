@@ -1,0 +1,13 @@
+#! /bin/bash
+echo "Backing up Cloud Storage.."
+
+if [ -d "~/cloud-storage-backup" ]
+then
+        echo "Deleting previous Cloud Storage backup.."
+        rm -r ~/cloud-storage-backup
+fi
+
+echo "Making new Cloud Storage Backup.."
+cp ~/cloud-storage ~/cloud-storage-backup
+echo "Finished."
+
