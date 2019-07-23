@@ -9,5 +9,6 @@ fi
 
 echo "Making new Cloud Storage Backup.."
 cp -r ~/cloud-storage ~/cloud-storage-backup
+
 echo "Finished."
 
