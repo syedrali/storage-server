@@ -1,4 +1,4 @@
 #!/bin/bash
-echo "Starting SyncThing"
+echo "Starting SyncThing.."
 
 nohup syncthing &> /dev/null &
