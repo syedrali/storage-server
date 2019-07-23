@@ -8,6 +8,6 @@ then
 fi
 
 echo "Making new Cloud Storage Backup.."
-cp ~/cloud-storage ~/cloud-storage-backup
+cp -r ~/cloud-storage ~/cloud-storage-backup
 echo "Finished."
 
