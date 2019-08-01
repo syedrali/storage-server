@@ -1,0 +1,8 @@
+#! /bin/bash
+echo "Starting Cloud Storage MEGA sync.."
+
+echo "Logging in to MEGA.."
+mega-login username password
+
+echo "Setting synchronisation.."
+mega-sync ~/cloud-storage /"Cloud-Storage"
