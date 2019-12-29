@@ -5,4 +5,4 @@ echo "Logging in to MEGA.."
 mega-login username password
 
 echo "Setting synchronisation.."
-mega-sync ~/cloud-storage /"Cloud-Storage"
+mega-sync ~/cloud-storage /"Cloud Storage"
