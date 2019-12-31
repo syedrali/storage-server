@@ -9,20 +9,3 @@ iptables -A INPUT -p tcp ! --syn -m state --state NEW -j DROP
 
 #reject xmas packets
 iptables -A INPUT -p tcp --tcp-flags ALL ALL -j DROP
-
-#reject sendmail
-iptables -A INPUT -p tcp --dport 25 -j DROP
-
-#allow outgoing established connections to receive replies e.g. ping
-iptables -I INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-
-#allow mail from specific ip
-iptables -A INPUT -p tcp -s xxx.xxx.xxx.xxx -m tcp --dport 25 -j ACCEPT
-
-#allow loopback traffic
-iptables -A INPUT -i lo -j ACCEPT
-iptables -A OUTPUT -o lo -j ACCEPT
-
-#allow everything else
-iptables -P OUTPUT ACCEPT
-#iptables -P INPUT DROP
