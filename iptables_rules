@@ -9,3 +9,6 @@ iptables -A INPUT -p tcp ! --syn -m state --state NEW -j DROP
 
 #reject xmas packets
 iptables -A INPUT -p tcp --tcp-flags ALL ALL -j DROP
+
+#save new rules
+service iptables save
