@@ -1,14 +1,17 @@
-#flush current rules
+#! /bin/bash
+echo "Setting up iptables rules.."
+
+echo "Flushing current rules.."
 iptables -F
 
-#block null packets
+echo "Blocking null packets.."
 iptables -A INPUT -p tcp --tcp-flags ALL NONE -j DROP
 
-#reject syn flood attack
+echo "Rejecting syn flood attack.."
 iptables -A INPUT -p tcp ! --syn -m state --state NEW -j DROP
 
-#reject xmas packets
+echo "Rejecting xmas packets.."
 iptables -A INPUT -p tcp --tcp-flags ALL ALL -j DROP
 
-#save new rules
+echo "Saving new rules.."
 service iptables save
